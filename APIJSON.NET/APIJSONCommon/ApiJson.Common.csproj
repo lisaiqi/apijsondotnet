@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Properties\AssemblyInfo.cs" />
     <Compile Remove="SelectTable - 副本.cs" />
   </ItemGroup>
 
@@ -14,6 +15,10 @@
     <PackageReference Include="AspectCore.Extensions.Reflection" Version="1.1.0" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="2.1.1" />
     <PackageReference Include="sqlSugarCore" Version="4.9.9.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
 
 </Project>
