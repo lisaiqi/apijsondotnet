@@ -28,8 +28,8 @@
         public void ConfigureServices(IServiceCollection services)
         {
          
-            services.Configure<List<Role>>(Configuration.GetSection("RoleList"));
-            services.Configure<Dictionary<string,string>>(Configuration.GetSection("tablempper"));
+            services.Configure<List<Role>>(Configuration.GetSection("RoleList"));//从appsettings.json取出rolelist
+            services.Configure<Dictionary<string,string>>(Configuration.GetSection("tablempper"));//从appsettings.json取出tablempper
             services.Configure<TokenAuthConfiguration>(tokenAuthConfig =>
             {
                 tokenAuthConfig.SecurityKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration["Authentication:JwtBearer:SecurityKey"]));
